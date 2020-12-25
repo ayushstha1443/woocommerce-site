@@ -16,3 +16,13 @@ function load_javascript()
     wp_enqueue_script('custom');
 }
 add_action('wp_enqueue_scripts', 'load_javascript');
+
+// Add menus from the admin dashboard
+add_theme_support('menus');
+
+// Register Menus
+register_nav_menus (
+    array(
+        'top-menu' => 'Top Menu',
+    )
+);
